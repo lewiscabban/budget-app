@@ -1,3 +1,49 @@
 # Virtual Environment
 .venv
 __pycache__
+
+# Frontend Environment
+*/node_modules
+
+# Compiled output
+frontend/budget-tracker/dist
+frontend/budget-tracker/tmp
+frontend/budget-tracker/out-tsc
+frontend/budget-tracker/bazel-out
+
+# Node
+frontend/budget-tracker/node_modules
+frontend/budget-tracker/npm-debug.log
+frontend/budget-tracker/yarn-error.log
+
+# IDEs and editors
+frontend/budget-tracker/.idea/
+frontend/budget-tracker/.project
+frontend/budget-tracker/.classpath
+frontend/budget-tracker/.c9/
+frontend/budget-tracker/*.launch
+frontend/budget-tracker/.settings/
+frontend/budget-tracker/*.sublime-workspace
+
+# Visual Studio Code
+frontend/budget-tracker/.vscode/*
+frontend/budget-tracker/!.vscode/settings.json
+frontend/budget-tracker/!.vscode/tasks.json
+frontend/budget-tracker/!.vscode/launch.json
+frontend/budget-tracker/!.vscode/extensions.json
+frontend/budget-tracker/.history/*
+
+# Miscellaneous
+frontend/budget-tracker/.angular/cache
+frontend/budget-tracker/.sass-cache/
+frontend/budget-tracker/connect.lock
+frontend/budget-tracker/coverage
+frontend/budget-tracker/libpeerconnection.log
+frontend/budget-tracker/testem.log
+frontend/budget-tracker/typings
+
+# System files
+frontend/budget-tracker/.DS_Store
+frontend/budget-tracker/Thumbs.db
+
+frontend/budget-tracker/.editorconfig
