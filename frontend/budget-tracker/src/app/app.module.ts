@@ -29,7 +29,7 @@ import { BudgetComponent } from './budget/budget.component';
         return {
           cache: new InMemoryCache(),
           link: httpLink.create({
-            uri: 'https://localhost:8000/graphql'
+            uri: 'http://localhost:8000/graphql'
           })
         }
       },

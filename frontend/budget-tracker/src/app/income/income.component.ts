@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 
-import { GET_USERS } from '../graphql/graphql.queries';
+import { GET_USER } from '../graphql/graphql.queries';
 
 @Component({
   selector: 'app-income',
@@ -17,10 +17,10 @@ export class IncomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-      this.apollo.query({
-      query: GET_USERS,
+      this.apollo.mutate({
+        mutation: GET_USER,
     }).subscribe(({ data, error }: any) => {
-      this.userId = data.getUsers.userId;
+      this.userId = data.getUser.userId;
     })
   }
 }
