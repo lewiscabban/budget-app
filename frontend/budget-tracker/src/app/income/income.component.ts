@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 
-import { GET_USER } from '../graphql/graphql.queries';
+import { GraphQLService } from '../services/graphql.service';
 
 @Component({
   selector: 'app-income',
@@ -13,13 +13,11 @@ export class IncomeComponent implements OnInit {
   userId: string = ""
 
   constructor(
-    private apollo: Apollo,
+    private graphQL: GraphQLService
   ) { }
 
   ngOnInit(): void {
-      this.apollo.mutate({
-        mutation: GET_USER,
-    }).subscribe(({ data, error }: any) => {
+    this.graphQL.getUser().subscribe(({ data, error }: any) => {
       this.userId = data.getUser.userId;
     })
   }

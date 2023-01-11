@@ -1,0 +1,4 @@
+{
+    "gqlHttp": "/graphql",
+    "gqlWs": "ws://localhost:8000/graphql"
+}
