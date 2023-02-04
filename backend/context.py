@@ -1,7 +1,7 @@
 from typing import Dict
 from strawberry.fastapi import BaseContext
 
-from classes import User
+from classes import BudgetTracker
 
 
 class BudgetTrackerContext(BaseContext):
@@ -9,7 +9,7 @@ class BudgetTrackerContext(BaseContext):
 
     def __init__(
         self,
-        users: Dict[str, User],
+        users: Dict[str, BudgetTracker],
     ):
         super().__init__()
         self.users = users
