@@ -1,11 +1,11 @@
+from datetime import datetime
+from enum import Enum
+from typing import List
+
 import strawberry
 
-from typing import List
-from enum import Enum
-from datetime import datetime
 
-
-class PayRate(Enum):
+class PayRate(str, Enum):
     DAY = "DAY"
     WEEK = "WEEK"
     FORTNIGHT = "FORTNIGHT"
@@ -14,37 +14,37 @@ class PayRate(Enum):
     YEAR = "YEAR"
 
 
-class BudgetType(Enum):
+class BudgetType(str, Enum):
     PERCENTAGE = "PERCENTAGE"
     TOTAL = "TOTAL"
 
 
 @strawberry.type
 class Budget:
-    name: str
+    budget_name: str
     amount: float
-    budget_type: BudgetType
+    budget_type: str
 
 
 @strawberry.type
 class Income:
-    name: str
-    pay_rate: PayRate
+    income_name: str
+    pay_rate: str
     pay_day: datetime
     amount: float
 
 
 @strawberry.type
 class Bill:
-    name: str
-    pay_rate: PayRate
+    bill_name: str
+    pay_rate: str
     pay_day: datetime
     amount: float
 
 
 @strawberry.type
 class BudgetTracker:
-    name: str
+    budget_tracker_name: str
     incomes: List[Income]
     budgets: List[Budget]
     bills: List[Bill]
