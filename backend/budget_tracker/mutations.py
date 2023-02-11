@@ -1,8 +1,8 @@
 from datetime import datetime
 
 import strawberry
-from classes import Bill, Budget, BudgetTracker, Income
-from context import BudgetTrackerContext
+from budget_tracker.classes import Bill, Budget, BudgetTracker, Income
+from budget_tracker.context import BudgetTrackerContext
 from strawberry.types import Info
 
 

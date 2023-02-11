@@ -1,10 +1,10 @@
 import strawberry
 import uvicorn
-from context import BudgetTrackerManager
+from budget_tracker.context import BudgetTrackerManager
+from budget_tracker.mutations import Mutation
+from budget_tracker.querys import Query
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from mutations import Mutation
-from querys import Query
 from strawberry.fastapi import GraphQLRouter
 
 app = FastAPI()

@@ -1,8 +1,6 @@
 import strawberry
-
+from budget_tracker.context import BudgetTrackerContext
 from strawberry.types import Info
-
-from context import BudgetTrackerContext
 
 
 @strawberry.type
