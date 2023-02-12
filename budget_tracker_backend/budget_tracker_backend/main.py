@@ -25,4 +25,5 @@ async def startup_event() -> None:
 
     app.include_router(graphql_app, prefix="/graphql")
 
-uvicorn.run(app, host="localhost", port=8000)
+def main() -> None:
+    uvicorn.run(app, host="localhost", port=8000)
