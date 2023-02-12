@@ -1,11 +1,12 @@
 import strawberry
 import uvicorn
-from budget_tracker.context import BudgetTrackerManager
-from budget_tracker.mutations import Mutation
-from budget_tracker.querys import Query
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from strawberry.fastapi import GraphQLRouter
+
+from budget_tracker_backend.context import BudgetTrackerManager
+from budget_tracker_backend.mutations import Mutation
+from budget_tracker_backend.querys import Query
 
 app = FastAPI()
 schema = strawberry.Schema(Query, Mutation)

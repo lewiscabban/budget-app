@@ -2,11 +2,12 @@ from datetime import datetime
 
 import pytest
 import strawberry
-from budget_tracker.classes import Bill, Budget, BudgetTracker, Income
-from budget_tracker.context import BudgetTrackerManager
-from budget_tracker.main import schema
-from budget_tracker.mutations import Mutation
 from strawberry.types import Info
+
+from budget_tracker_backend.classes import Bill, Budget, BudgetTracker, Income
+from budget_tracker_backend.context import BudgetTrackerManager
+from budget_tracker_backend.main import schema
+from budget_tracker_backend.mutations import Mutation
 
 
 @pytest.mark.asyncio

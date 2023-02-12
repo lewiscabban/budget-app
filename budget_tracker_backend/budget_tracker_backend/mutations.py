@@ -1,9 +1,10 @@
 from datetime import datetime
 
 import strawberry
-from budget_tracker.classes import Bill, Budget, BudgetTracker, Income
-from budget_tracker.context import BudgetTrackerContext
 from strawberry.types import Info
+
+from budget_tracker_backend.classes import Bill, Budget, BudgetTracker, Income
+from budget_tracker_backend.context import BudgetTrackerContext
 
 
 @strawberry.type

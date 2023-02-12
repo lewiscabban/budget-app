@@ -1,0 +1,6 @@
+asyncio
+fastapi
+pytest
+pytest-asyncio
+strawberry-graphql[debug-server]
+uvicorn[standard]

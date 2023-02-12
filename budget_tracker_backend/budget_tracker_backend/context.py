@@ -1,7 +1,8 @@
 from typing import Dict
 
-from budget_tracker.classes import BudgetTracker
 from strawberry.fastapi import BaseContext
+
+from budget_tracker_backend.classes import BudgetTracker
 
 
 class BudgetTrackerContext(BaseContext):

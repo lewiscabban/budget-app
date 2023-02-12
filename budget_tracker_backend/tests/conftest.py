@@ -1,8 +1,9 @@
 from datetime import datetime
 
 import pytest
-from budget_tracker.classes import Bill, Budget, BudgetTracker, Income
-from budget_tracker.context import BudgetTrackerManager
+
+from budget_tracker_backend.classes import Bill, Budget, BudgetTracker, Income
+from budget_tracker_backend.context import BudgetTrackerManager
 
 
 @pytest.fixture(scope="function")
