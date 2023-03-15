@@ -48,7 +48,7 @@ class Mutation:
         return info.context.budget_trackers[budget_tracker_id]
 
     @strawberry.mutation
-    def add_income(self, info: Info[BudgetTrackerContext, None], budget_tracker_id: str, income_name: str, amount: float, pay_rate: str, pay_day: datetime) -> BudgetTracker:
+    def add_income(self, info: Info[BudgetTrackerContext, None], budget_tracker_id: str, income_name: str, amount: float, pay_rate: str, pay_day: str) -> BudgetTracker:
         info.context.budget_trackers[budget_tracker_id].incomes.append(Income(income_name=income_name, amount=amount, pay_rate=pay_rate, pay_day=pay_day))
         return info.context.budget_trackers[budget_tracker_id]
 
@@ -60,7 +60,7 @@ class Mutation:
         return {}
 
     @strawberry.mutation
-    def update_income(self, info: Info[BudgetTrackerContext, None], budget_tracker_id: str, old_income_name: str, new_income_name: str, amount: float, pay_rate: str, pay_day: datetime) -> BudgetTracker:
+    def update_income(self, info: Info[BudgetTrackerContext, None], budget_tracker_id: str, old_income_name: str, new_income_name: str, amount: float, pay_rate: str, pay_day: str) -> BudgetTracker:
         for income in info.context.budget_trackers[budget_tracker_id].incomes:
             if income.income_name == old_income_name:
                 income.income_name = new_income_name

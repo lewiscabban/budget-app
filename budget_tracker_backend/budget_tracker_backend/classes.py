@@ -30,7 +30,7 @@ class Budget:
 class Income:
     income_name: str
     pay_rate: str
-    pay_day: datetime
+    pay_day: str
     amount: float
 
 
