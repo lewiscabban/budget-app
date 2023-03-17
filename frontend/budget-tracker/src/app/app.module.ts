@@ -6,16 +6,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IncomeComponent } from './income/income.component';
 import { BudgetComponent } from './budget/budget.component';
 import { ConfigServiceProvider } from './providers/config.service.provider';
 import { apolloServiceProvider } from './providers/apollo.provider';
+import { TrackerComponent } from './tracker/tracker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IncomeComponent,
-    BudgetComponent
+    BudgetComponent,
+    TrackerComponent
   ],
   imports: [
     BrowserModule,

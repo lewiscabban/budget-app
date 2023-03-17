@@ -1,0 +1,72 @@
+<div>
+    <form [formGroup]="budgetTrackerForm" (ngSubmit)="addBudgetTracker()">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" formControlName="name"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div>
+    <form [formGroup]="incomeForm" (ngSubmit)="addIncome()">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" formControlName="name"><br><br>
+
+        <label for="incomeName">Enter your income name:</label>
+        <input type="text" id="incomeName" name="incomeName" formControlName="incomeName"><br><br>
+
+        <label for="amount">Enter your income amount:</label>
+        <input type="number" id="amount" name="amount" formControlName="amount"><br><br>
+
+        <label for="payDay">Select your pay day:</label>
+        <input type="date" id="payDay" name="payDay" formControlName="payDay"><br><br>
+
+        <label for="payRate">Select your pay rate:</label>
+        <select id="payRate" name="payRate" formControlName="payRate">
+            <option *ngFor="let option of payRateOptions" [value]="option">{{ option }}</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div>
+    <form [formGroup]="budgetForm" (ngSubmit)="addBudget()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name"><br><br>
+
+        <label for="budgetName">Budget Name:</label>
+        <input type="text" id="budgetName" formControlName="budgetName"><br><br>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" formControlName="amount"><br><br>
+
+        <label for="budgetType">Budget Type:</label>
+        <select id="budgetType" formControlName="budgetType"><br><br>
+            <option *ngFor="let option of budgetTypeOptions" [value]="option">{{ option }}</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div>
+    <form [formGroup]="billForm" (ngSubmit)="addBill()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name"><br><br>
+    
+        <label for="billName">Bill Name:</label>
+        <input type="text" id="billName" formControlName="billName"><br><br>
+    
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" formControlName="amount"><br><br>
+    
+        <label for="payDay">Pay Day:</label>
+        <input type="date" id="payDay" name="payDay" formControlName="payDay"><br><br>
+    
+        <label for="payRate">Pay Rate:</label>
+        <select id="payRate" name="payRate" formControlName="payRate">
+            <option *ngFor="let option of payRateOptions" [value]="option">{{ option }}</option>
+        </select><br><br>
+    
+        <button type="submit">Submit</button>
+    </form>
+</div>

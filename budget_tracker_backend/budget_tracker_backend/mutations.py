@@ -78,7 +78,7 @@ class Mutation:
         return info.context.budget_trackers[budget_tracker_id]
 
     @strawberry.mutation
-    def add_bill(self, info: Info[BudgetTrackerContext, None], budget_tracker_id: str, bill_name: str, amount: float, pay_rate: str, pay_day: datetime) -> BudgetTracker:
+    def add_bill(self, info: Info[BudgetTrackerContext, None], budget_tracker_id: str, bill_name: str, amount: float, pay_rate: str, pay_day: str) -> BudgetTracker:
         info.context.budget_trackers[budget_tracker_id].bills.append(Bill(bill_name=bill_name, amount=amount, pay_rate=pay_rate, pay_day=pay_day))
         return info.context.budget_trackers[budget_tracker_id]
 
@@ -90,7 +90,7 @@ class Mutation:
         return {}
 
     @strawberry.mutation
-    def update_bill(self, info: Info[BudgetTrackerContext, None], budget_tracker_id: str, old_bill_name: str, new_bill_name: str, amount: float, pay_rate: str, pay_day: datetime) -> BudgetTracker:
+    def update_bill(self, info: Info[BudgetTrackerContext, None], budget_tracker_id: str, old_bill_name: str, new_bill_name: str, amount: float, pay_rate: str, pay_day: str) -> BudgetTracker:
         for bill in info.context.budget_trackers[budget_tracker_id].bills:
             if bill.bill_name == old_bill_name:
                 bill.bill_name = new_bill_name

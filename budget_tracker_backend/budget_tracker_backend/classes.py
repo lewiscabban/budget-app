@@ -6,12 +6,13 @@ import strawberry
 
 
 class PayRate(str, Enum):
-    DAY = "DAY"
-    WEEK = "WEEK"
-    FORTNIGHT = "FORTNIGHT"
-    MONTH = "MONTH"
-    QUARTER = "QUARTER"
-    YEAR = "YEAR"
+    DAILY = "DAILY"
+    WEEKLY = "WEEKLY"
+    FORTNIGHTLY = "FORTNIGHTLY"
+    MONTHLY = "MONTHLY"
+    QUARTERLY = "QUARTERLY"
+    BI_ANNUALLY = "BI_ANNUALLY"
+    ANNUALLY = "ANNUALLY"
 
 
 class BudgetType(str, Enum):
@@ -38,7 +39,7 @@ class Income:
 class Bill:
     bill_name: str
     pay_rate: str
-    pay_day: datetime
+    pay_day: str
     amount: float
 
 
